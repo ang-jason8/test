@@ -61,8 +61,8 @@ describe('GET /todolists', () => {
       { title: 'test_item_2', date_due: '2021-12-30' }
     ]
     const itemsReturn = [
-      { title: 'test_item_1', date_due: '2021-12-29T16:00:00.000Z', todo_id: 1, is_completed : false, author_id:1 },
-      { title: 'test_item_2', date_due: '2021-12-29T16:00:00.000Z', todo_id: 2, is_completed : false, author_id:1 }
+      { title: 'test_item_1', date_due: '2021-12-30T00:00:00.000Z', todo_id: 1, is_completed : false, author_id:1 },
+      { title: 'test_item_2', date_due: '2021-12-30T00:00:00.000Z', todo_id: 2, is_completed : false, author_id:1 }
     ]
 
     beforeAll(async () => {
@@ -125,7 +125,7 @@ describe('POST /todolists', () => {
       date_due: '2021-12-30'
     }
 
-    const todoReturn = { title: 'test_item_1', date_due: '2021-12-29T16:00:00.000Z', is_completed : false, author_id:1, is_deleted: false, todo_id: 1 }
+    const todoReturn = { title: 'test_item_1', date_due: '2021-12-30T00:00:00.000Z', is_completed : false, author_id:1, is_deleted: false, todo_id: 1 }
 
 
     it('should return 201 for user 1', async () => {
@@ -152,7 +152,7 @@ describe('POST /todolists', () => {
         })
     })
 
-    const todoReturn2 = { title: 'test_item_1', date_due: '2021-12-29T16:00:00.000Z', is_completed : false, author_id:2, is_deleted: false, todo_id: 2 }
+    const todoReturn2 = { title: 'test_item_1', date_due: '2021-12-30T00:00:00.000Z', is_completed : false, author_id:2, is_deleted: false, todo_id: 2 }
 
     // for user 2
     // this test author_Id = 2 and todo_id = 2
@@ -201,7 +201,7 @@ describe('PUT /todolists', () => {
     }
     const updatedTodo = {
       title: 'long way to go',
-      date_due:'2021-11-10T16:00:00.000Z'
+      date_due:'2021-11-11T00:00:00.000Z'
     }
  
     beforeAll(async () => {
