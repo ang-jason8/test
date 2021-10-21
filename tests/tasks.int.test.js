@@ -71,7 +71,7 @@ describe('POST /todolists/:todo_id/tasks', () => {
       date_due: '2021-12-30'
     }
   
-    const todoReturn = { title: 'test_item_1', date_due: '2021-12-29T16:00:00.000Z', is_completed : false, author_id:1, is_deleted: false, todo_id: 1 }
+    const todoReturn = { title: 'test_item_1', date_due: '2021-12-30T00:00:00.000Z', is_completed : false, author_id:1, is_deleted: false, todo_id: 1 }
   
   
     it('should return 201 for user 1', async () => {
@@ -105,8 +105,8 @@ describe('POST /todolists/:todo_id/tasks', () => {
       { title: 'test_task_2', detail :'smaller details 2', date_due: '2021-12-30' }
     ]
     const tasksReturn = [
-      { title: 'test_task_1', detail: 'smaller details 1', date_due: '2021-12-29T16:00:00.000Z', task_id: 1, is_completed : false, author_id:1,todo_id: 1 },
-      { title: 'test_task_2', detail: 'smaller details 2',date_due: '2021-12-29T16:00:00.000Z', task_id: 2, is_completed : false, author_id:1,todo_id: 1  }
+      { title: 'test_task_1', detail: 'smaller details 1', date_due: '2021-12-30T00:00:00.000Z', task_id: 1, is_completed : false, author_id:1,todo_id: 1 },
+      { title: 'test_task_2', detail: 'smaller details 2',date_due: '2021-12-30T00:00:00.000Z', task_id: 2, is_completed : false, author_id:1,todo_id: 1  }
     ]
 
     beforeAll(async () => {
@@ -164,7 +164,7 @@ describe('POST /todolists/:todo_id/tasks', () => {
       date_due: '2021-12-30'
     }
   
-    const todoReturn = { title: 'test_item_2', date_due: '2021-12-29T16:00:00.000Z', is_completed : false, author_id:2, is_deleted: false, todo_id: 2 }
+    const todoReturn = { title: 'test_item_2', date_due: '2021-12-30T00:00:00.000Z', is_completed : false, author_id:2, is_deleted: false, todo_id: 2 }
   
   
     it('should return 201 for user 2', async () => {
@@ -198,8 +198,8 @@ describe('POST /todolists/:todo_id/tasks', () => {
       { title: 'test_task_2', detail :'smaller details 2', date_due: '2021-12-30' }
     ]
     const tasksReturn = [
-      { title: 'test_task_1', detail: 'smaller details 1', date_due: '2021-12-29T16:00:00.000Z', task_id: 3, is_completed : false, author_id:1,todo_id: 2},
-      { title: 'test_task_2', detail: 'smaller details 2',date_due: '2021-12-29T16:00:00.000Z', task_id: 4, is_completed : false, author_id:1,todo_id: 2}
+      { title: 'test_task_1', detail: 'smaller details 1', date_due: '2021-12-30T00:00:00.000Z', task_id: 3, is_completed : false, author_id:1,todo_id: 2},
+      { title: 'test_task_2', detail: 'smaller details 2',date_due: '2021-12-30T00:00:00.000Z', task_id: 4, is_completed : false, author_id:1,todo_id: 2}
     ]
 
     beforeAll(async () => {
@@ -306,7 +306,7 @@ describe('PUT /tasks', () => {
       const updatedTask = {
         title: 'shut down the tasking',
         detail: 'chop down the trees',
-        date_due:'2021-11-10T16:00:00.000Z',
+        date_due:'2021-11-11T00:00:00.000Z',
         task_id: 1,
         author_id:1,
         is_completed: false,
@@ -412,7 +412,7 @@ describe('DELETE /tasks', () => {
       const returnTask = {
         title: 'shut down the tasking',
         detail: 'chop down the trees',
-        date_due:'2021-11-10T16:00:00.000Z',
+        date_due:'2021-11-11T00:00:00.000Z',
         task_id: 1,
         author_id:1,
         is_completed: false,
